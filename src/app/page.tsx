@@ -36,7 +36,7 @@ export default function Home() {
     { id: 'mcd', icon: Smartphone, repo: 'mcd-app-ionic', github: 'https://github.com/MiguelRuizHdz/mcd-app-ionic', demo: null, tags: ['Ionic', 'TypeScript', 'Firebase'] },
     { id: 'tienda', icon: Layout, repo: 'tienda-regalos-app', image: '/projects/tienda-regalos-app.png', github: 'https://github.com/MiguelRuizHdz/tienda-regalos-app', demo: 'https://tienda-regalos-app.vercel.app', tags: ['Angular', 'Ionic', 'Firebase'] },
     { id: 'websocket', icon: Code2, repo: 'websocket-server-service-csharp', github: 'https://github.com/MiguelRuizHdz/websocket-server-service-csharp', demo: null, tags: ['C#', '.NET', 'WebSockets'] },
-    { id: 'portfolio', icon: Code2, repo: 'miguelruizhdz.com', image: '/projects/portfolio-preview.png', github: 'https://github.com/MiguelRuizHdz/miguelruizhdz.com', demo: 'https://miguelruizhdz.com', tags: ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind'] },
+    { id: 'portfolio', icon: Code2, repo: 'miguelruizhdz.com', image: '/projects/portfolio-preview.png', github: 'https://github.com/MiguelRuizHdz/miguelruizhdz.com', demo: 'https://miguelruizhdz.vercel.app/', tags: ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind'] },
   ];
 
   const skills = [

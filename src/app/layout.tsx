@@ -19,14 +19,14 @@ export default function RootLayout({
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://miguelruizhdz.com/" />
+        <meta property="og:url" content="https://miguelruizhdz.vercel.app/" />
         <meta property="og:title" content="Miguel Angel Ruiz Hernandez | Portfolio" />
         <meta property="og:description" content="Senior Software Engineer building high-performance solutions." />
         <meta property="og:image" content="/og-image.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://miguelruizhdz.com/" />
+        <meta property="twitter:url" content="https://miguelruizhdz.vercel.app/" />
         <meta property="twitter:title" content="Miguel Angel Ruiz Hernandez | Portfolio" />
         <meta property="twitter:description" content="Senior Software Engineer building high-performance solutions." />
         <meta property="twitter:image" content="/og-image.png" />
