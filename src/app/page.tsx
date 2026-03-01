@@ -33,9 +33,9 @@ export default function Home() {
   }, []);
 
   const projects = [
-    { id: 'mcd', icon: Smartphone, github: 'https://github.com/MiguelRuizHdz/mcd-app-ionic', demo: null, tags: ['Ionic', 'TypeScript', 'Firebase'] },
-    { id: 'tienda', icon: Layout, github: 'https://github.com/MiguelRuizHdz/tienda-regalos-app', demo: 'https://tienda-regalos-app.vercel.app', tags: ['Angular', 'Ionic', 'Firebase'] },
-    { id: 'websocket', icon: Code2, github: 'https://github.com/MiguelRuizHdz/websocket-server-service-csharp', demo: null, tags: ['C#', '.NET', 'WebSockets'] },
+    { id: 'mcd', icon: Smartphone, repo: 'mcd-app-ionic', github: 'https://github.com/MiguelRuizHdz/mcd-app-ionic', demo: null, tags: ['Ionic', 'TypeScript', 'Firebase'] },
+    { id: 'tienda', icon: Layout, repo: 'tienda-regalos-app', github: 'https://github.com/MiguelRuizHdz/tienda-regalos-app', demo: 'https://tienda-regalos-app.vercel.app', tags: ['Angular', 'Ionic', 'Firebase'] },
+    { id: 'websocket', icon: Code2, repo: 'websocket-server-service-csharp', github: 'https://github.com/MiguelRuizHdz/websocket-server-service-csharp', demo: null, tags: ['C#', '.NET', 'WebSockets'] },
   ];
 
   const skills = [
@@ -329,6 +329,10 @@ export default function Home() {
                   <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 </div>
                 <div className="p-12">
+                  <div className="flex items-center gap-3 mb-4 opacity-50">
+                    <Github className="w-4 h-4" />
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">{project.repo}</span>
+                  </div>
                   <h3 className="text-3xl font-black mb-5">{lang(`projects.${project.id}.title`)}</h3>
                   <p className="text-slate-400 text-xl font-light mb-10 leading-relaxed">
                     {lang(`projects.${project.id}.desc`)}
