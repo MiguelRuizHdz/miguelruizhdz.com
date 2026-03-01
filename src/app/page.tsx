@@ -283,27 +283,32 @@ export default function Home() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div>
-              <h2 className="text-4xl font-black mb-16 flex items-center gap-6">
-                <Code2 className="w-10 h-10 text-blue-500" />
-                Stack
-              </h2>
-              <div className="grid gap-14">
-                {skills.map((skillGroup) => (
-                  <div key={skillGroup.category}>
-                    <h4 className="text-base font-black uppercase tracking-wider text-blue-500 mb-8 border-l-4 border-blue-600 pl-4">{skillGroup.category}</h4>
-                    <div className="flex flex-wrap gap-4">
-                      {skillGroup.items.map(skill => (
-                        <span key={skill} className="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-sm font-medium hover:bg-blue-500/10 hover:border-blue-500/60 transition-all cursor-default shadow-lg">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+      {/* Skills Stack Section */}
+      <section id="stack" className="py-24 px-6 bg-white/[0.01]">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center gap-6 mb-16">
+            <Code2 className="w-10 h-10 text-blue-500" />
+            <h2 className="text-4xl font-black tracking-tighter">Stack</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {skills.map((skillGroup) => (
+              <div key={skillGroup.category} className="glass-card p-10 rounded-[32px] border-white/5 hover:border-blue-500/20 transition-all">
+                <h4 className="text-sm font-black uppercase tracking-[0.2em] text-blue-500 mb-8 border-l-4 border-blue-600 pl-4">
+                  {skillGroup.category}
+                </h4>
+                <div className="flex flex-wrap gap-3">
+                  {skillGroup.items.map(skill => (
+                    <span key={skill} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-bold hover:bg-blue-500/10 hover:border-blue-500/40 transition-all cursor-default shadow-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -428,6 +433,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+    </main >
   );
 }
