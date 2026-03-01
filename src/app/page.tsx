@@ -34,8 +34,9 @@ export default function Home() {
 
   const projects = [
     { id: 'mcd', icon: Smartphone, repo: 'mcd-app-ionic', github: 'https://github.com/MiguelRuizHdz/mcd-app-ionic', demo: null, tags: ['Ionic', 'TypeScript', 'Firebase'] },
-    { id: 'tienda', icon: Layout, repo: 'tienda-regalos-app', github: 'https://github.com/MiguelRuizHdz/tienda-regalos-app', demo: 'https://tienda-regalos-app.vercel.app', tags: ['Angular', 'Ionic', 'Firebase'] },
+    { id: 'tienda', icon: Layout, repo: 'tienda-regalos-app', image: '/projects/tienda-regalos-app.png', github: 'https://github.com/MiguelRuizHdz/tienda-regalos-app', demo: 'https://tienda-regalos-app.vercel.app', tags: ['Angular', 'Ionic', 'Firebase'] },
     { id: 'websocket', icon: Code2, repo: 'websocket-server-service-csharp', github: 'https://github.com/MiguelRuizHdz/websocket-server-service-csharp', demo: null, tags: ['C#', '.NET', 'WebSockets'] },
+    { id: 'portfolio', icon: Code2, repo: 'miguelruizhdz.com', image: '/projects/portfolio-preview.png', github: 'https://github.com/MiguelRuizHdz/miguelruizhdz.com', demo: 'https://miguelruizhdz.com', tags: ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind'] },
   ];
 
   const skills = [
@@ -324,8 +325,16 @@ export default function Home() {
                 key={project.id}
                 className="glass-card rounded-[48px] overflow-hidden group border-white/5 shadow-2xl transition-all hover:-translate-y-2"
               >
-                <div className="h-72 bg-gradient-to-br from-blue-600/20 to-indigo-900/60 flex items-center justify-center p-16 relative">
-                  <project.icon className="w-24 h-24 text-blue-400 group-hover:scale-110 group-hover:rotate-6 transition-all duration-700 relative z-10 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
+                <div className="h-72 bg-gradient-to-br from-blue-600/20 to-indigo-900/60 flex items-center justify-center relative overflow-hidden group">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={lang(`projects.${project.id}.title`)}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                    />
+                  ) : (
+                    <project.icon className="w-24 h-24 text-blue-400 group-hover:scale-110 group-hover:rotate-6 transition-all duration-700 relative z-10 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
+                  )}
                   <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 </div>
                 <div className="p-12">
